@@ -12,7 +12,6 @@ const Login = () => {
       
       const loginHandler = (e)=>{
         e.preventDefault()
-        
         const cheakValue = JSON.parse(localStorage.getItem("register_data"))
         console.log(cheakValue)
 
@@ -20,13 +19,12 @@ const Login = () => {
           
             navigate('/home')
         }
-        else if (email==="" && password===""){
+        else if (email==="" &&password===""){
             alert("Enter email or password")
         }
         else{
             alert("Account not exist")
         }
-
         setEmail("")
         setPassword("")
       }
